@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #f5f5f5;
+      color: #111;
+      line-height: 1.8;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 18px 20px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 1.6rem;
+      color: #444;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      gap: 18px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #444;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #0077ff;
+    }
+
+    section {
+      padding: 30px 10px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 70vh;
+    }
+
+    .hero img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #0077ff;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    .hero h2 {
+      font-size: 2.1rem;
+      margin-bottom: 12px;
+      color: #0077ff;
+      font-weight: 800;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .about, .projects, .contact {
+      margin-top: 40px;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+      margin-bottom: 18px;
+      color: #333;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .about p, .projects p, .contact p {
+      font-size: 1.1rem;
+      color: #444;
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 18px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card h4 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #0077ff;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #444;
+    }
+
+    .card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .contact a {
+      display: inline-block;
+      margin: 10px;
+      font-size: 1.1rem;
+      color: #0077ff;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 18px;
+      margin-top: 40px;
+      background: #fff;
+      font-size: 1rem;
+      color: #666;
+    }
+
+    /* Responsive Styles */
+    @media (min-width: 600px) {
+      header {
+        flex-direction: row;
+        align-items: center;
+        padding: 25px 40px;
+      }
+      header h1 {
+        font-size: 2rem;
+        margin-bottom: 0;
+      }
+      nav {
+        justify-content: flex-end;
+        gap: 30px;
+      }
+      section {
+        padding: 60px 30px;
+      }
+      .hero img {
+        width: 260px;
+        height: 260px;
+      }
+      .hero h2 {
+        font-size: 3rem;
+      }
+      .hero p {
+        font-size: 1.5rem;
+      }
+      h3 {
+        font-size: 2.2rem;
+      }
+      .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      }
+      .card img {
+        height: 200px;
+      }
+    }
+
+    @media (min-width: 900px) {
+      section {
+        padding: 80px;
+      }
+      .hero img {
+        width: 400px;
+        height: 400px;
+      }
+      .hero h2 {
+        font-size: 4rem;
+      }
+      .hero p {
+        font-size: 2rem;
+      }
+      h3 {
+        font-size: 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portfolio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="picture.jpg" alt="My Photo">
+    <h2>CHARLS MATTHEW C. FANUGON</h2>
+    <p>Aspiring Developer | Designer | Creator</p>
+  </section>
+
+  <section id="about" class="about">
+    <h3>About Me</h3>
+    <p>
+      Just a cool guy
+    </p>
+  </section>
+
+ <section id="projects" class="projects">
+  <h3>Projects</h3>
+  <div class="projects-grid">
+    <div class="card">
+      <img src="design1.jpg" alt="Project One">
+      <h4>Project One</h4>
+      <p>Short description about your project. What makes it special?</p>
+    </div>
+    <div class="card">
+      <img src="design2.jpg" alt="Project Two">
+      <h4>Project Two</h4>
+      <p>Another project with details and features you’re proud of.</p>
+    </div>
+    <div class="card">
+      <img src="design3.jpg" alt="Project Three">
+      <h4>Project Three</h4>
+      <p>Highlight your best work here with a clean preview.</p>
+    </div>
+  </div>
+</section>
+
+  <section id="contact" class="contact">
+    <h3>Contact</h3>
+    <p>Let’s connect!</p>
+    <a href="mailto:fanugoncharlsmatthew@gmail.com">Email</a>
+    <a href="https://www.facebook.com/charls.fanugon" target="_blank">Facebook</a>
+    <a href="https://www.tiktok.com/@slrahc7" target="_blank">Tiktok</a>
+  </section>
+
+  <footer>
+    &copy; 2025 CHARLS MATTHEW C. FANUGON. All rights reserved.
+  </footer>
+</body>
+</html>
